@@ -16,11 +16,11 @@
 
             while ($row = mysqli_fetch_assoc($result)) {
                 echo "<tr>";
-                echo "<td>" . $row['car_id'] . "</td>";
-                echo "<td>" . $row['make'] . "</td>";
-                echo "<td>" . $row['model'] . "</td>";
-                echo "<td>" . $row['price'] . "</td>";
-                echo "<td>" . $row['yom'] . "</td>";
+                echo "<td>" . htmlspecialchars($row['car_id']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['make']). "</td>";
+                echo "<td>" . htmlspecialchars($row['model']). "</td>";
+                echo "<td>" . htmlspecialchars($row['price']). "</td>";
+                echo "<td>" . htmlspecialchars($row['yom']). "</td>";
                 echo "</tr>";
             }
 
